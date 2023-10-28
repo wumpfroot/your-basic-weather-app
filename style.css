@@ -74,7 +74,13 @@ video {
 	visibility: hidden;
 }
 
-.additional-info {
+.additional-temp-info {
+	visibility: hidden;
 	display: flex;
 	gap: 3rem;
+}
+
+.additional-temp-info div {
+	display: flex;
+	flex-direction: column;
 }

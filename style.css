@@ -49,6 +49,10 @@ video {
 	margin-inline: 0.4rem;
 }
 
+.date {
+	text-align: center;
+}
+
 .search-container {
 	display: flex;
 	justify-content: center;
@@ -64,6 +68,10 @@ video {
 
 .location-temp {
 	text-align: center;
+}
+
+.temp-conversion-btns {
+	visibility: hidden;
 }
 
 .additional-info {

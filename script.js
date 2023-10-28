@@ -1,12 +1,27 @@
-const exampleApiCall = "https://api.openweathermap.org/data/2.5/weather?q=espoo&units=metric&appid=a29ad671cba80509c050c4546f651a06";
-
 const searchBtn = document.querySelector(".search-container button");
 const infoBox = document.querySelector(".weather-info");
 
+//Today's date information
+const todaysDate = document.querySelector(".date");
+
+const date = new Date();
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+let dayOfTheWeek = weekday[date.getDay()];
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+todaysDate.innerHTML = `<h2>Today is ${dayOfTheWeek} ${day}/${month}/${year}</h2>`;
+
+// Search event
 searchBtn.addEventListener("click", () => {
 	const cityResult = document.querySelector(".search-container input").value;
+	const tempButtons = document.querySelector(".temp-conversion-btns");
 
 	if (cityResult === "") return;
+
+	tempButtons.style.visibility = "visible";
 
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityResult}&units=metric&appid=a29ad671cba80509c050c4546f651a06`)
 		.then((response) => response.json())

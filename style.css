@@ -1,3 +1,6 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 /* css reset */
 
 /* makes sizing simpler */
@@ -14,6 +17,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: "Bebas Neue", sans-serif;
 }
 
 /* dark mode user-agent-styles */
@@ -26,6 +30,8 @@ html {
 
 body {
 	min-height: 100vh;
+	display: grid;
+	place-content: center;
 }
 
 /* responsive images/videos */
@@ -35,4 +41,32 @@ svg,
 video {
 	display: block;
 	max-width: 100%;
+}
+
+/* main styles */
+
+.container {
+	margin-inline: 0.4rem;
+}
+
+.search-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.weather-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.location-temp {
+	text-align: center;
+}
+
+.additional-info {
+	display: flex;
+	gap: 3rem;
 }

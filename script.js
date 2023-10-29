@@ -46,8 +46,12 @@ const convertTemperature = (json, unit) => {
 };
 
 const convertWind = (json, unit) => {
-	const windSpeedCalculation = (speed) => (unit === "I" ? speed / 1609.34 : speed);
-	elements.windSpeed.innerHTML = `${windSpeedCalculation(json.wind.speed.toFixed(1))} m/h`;
+	const windSpeedCalculation = (speed) => {
+		const conversion = speed / 1609.34;
+		const roundedValue = (conversion * 100) / 100;
+		return unit === "I" ? roundedValue.toFixed(4) : speed;
+	};
+	elements.windSpeed.innerHTML = `${windSpeedCalculation(json.wind.speed)} m/h`;
 	elements.windDirection.innerHTML = `${json.wind.deg}°`;
 };
 

@@ -84,3 +84,9 @@ video {
 	display: flex;
 	flex-direction: column;
 }
+
+.wind-info {
+	visibility: hidden;
+	display: flex;
+	gap: 7.1rem;
+}

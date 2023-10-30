@@ -20,9 +20,10 @@ const elements = {
 const updateDate = () => {
 	const date = new Date();
 	const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	let dayOfTheWeek = weekday[date.getDay()];
 	let day = date.getDate();
-	let month = date.getMonth() + 1;
+	let month = months[date.getMonth()];
 	let year = date.getFullYear();
 	elements.todaysDate.innerHTML = `<h2>Today is ${dayOfTheWeek} ${day}/${month}/${year}</h2>`;
 };

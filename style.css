@@ -32,6 +32,7 @@ body {
 	min-height: 100vh;
 	display: grid;
 	place-content: center;
+	position: relative;
 }
 
 /* responsive images/videos */
@@ -53,11 +54,27 @@ video {
 	text-align: center;
 }
 
+.fixed-header {
+	position: fixed;
+	top: 20%;
+	left: 37%;
+	/* transform: translate(-50%, -50%); */
+}
+
 .search-container {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 	gap: 0.3rem;
+}
+
+.fa-globe {
+	margin: auto 0;
+}
+
+input {
+	padding: 0.5rem 2rem;
+	font-size: 1.2rem;
 }
 
 .weather-info {
@@ -70,8 +87,22 @@ video {
 	text-align: center;
 }
 
+.location {
+	font-size: 2rem;
+}
+
+.temp {
+	font-size: 5rem;
+}
+
 .temp-conversion-btns {
 	visibility: hidden;
+}
+
+.temp-conversion-btns button {
+	padding: 0.4rem;
+	margin: 0.4rem;
+	cursor: pointer;
 }
 
 .additional-temp-info {
